@@ -1,0 +1,62 @@
+<!-- <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2>Lists</h2>
+      <ul *ngFor="let list of lists" [routerLink]="['/lists', list._id]">
+        <div class="row">
+            <div class="column2" style="background-color: grey;">
+                <li>{{list.title}}</li>
+            </div>
+            <div class="column3" style="background-color: grey;">
+                <span class="pull-right task-delete btn-rounded-corner" (click)="deleteList(list)">X</span>
+            </div>
+          </div>
+      </ul> 
+    <button class="btn btn-primary btn-rounded-cornerr" routerLink="/new-list">Add List</button>
+    </div>
+    
+    <div class="column" style="background-color:#bbb;">
+      <h2>Tasks</h2>
+      <div *ngFor="let task of tasks" (click)="onTaskClick(task)">
+        <p class="white-text">
+            {{task.title}} - {{task.completed}}
+            <span class="pull-right task-delete btn-rounded-corner" (click)="deleteTask(task)">X</span>
+        </p>
+    </div>
+    <button class="btn btn-primary btn-rounded-cornerr" (click)="addTaskClick()">Add Task</button>
+    </div>
+  </div>
+
+ -->
+ 
+<h1 class="center">TASK MANAGER</h1>
+ <div class="container">
+  <div class="column column-1">
+    <h2>Lists</h2>
+    <div class="scrollable-view">
+      <ul *ngFor="let list of lists" [routerLink]="['/lists', list._id]">
+        <li class="list-item" [ngClass]="{'is-active': listClicked === list._id}" (click)="onListItemClick(list._id)">
+          <span class="start-text">{{list.title}}</span>
+          <span class="right-end" (click)="deleteList(list)" style="color: red;">X</span>
+        </li>
+        <br>
+      </ul>
+    </div>
+    <button class="btn btn-primary btn-rounded-cornerr" routerLink="/new-list">Add List</button>
+  </div>
+
+  <div class="column column-2">
+    <h2>Tasks</h2>
+    <div class="scrollable-view">
+      <ul *ngFor="let task of tasks" (click)="onTaskClick(task)">
+        <li class="list-item">
+          <span class="start-text" [ngClass]="{'faded': !task.completed}">{{task.title}}</span>
+          <span class="right-end" (click)="deleteTask(task)" style="color: red;">X</span>
+        </li>
+        <br>
+      </ul>
+    </div>
+    <button class="btn btn-primary btn-rounded-cornerr" (click)="addTaskClick()">Add Task</button>
+  </div>
+</div>
+
+

@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column {
+    margin: 0 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    height: 80%;
+  }
+  
+  .column-1 {
+    background-color: black;
+  }
+  
+  .column-2 {
+    background-color: rgb(57, 57, 57);
+  }
+  
+  .scrollable-view {
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .column-1 li {
+    // background-color: rgb(57, 57, 57);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .column-2 li {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+  }
+
+  .list-item {
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.right-end {
+    margin-left: auto;
+}
+
+.faded {
+  color: grey;
+}
+
+.is-active {
+  background-color: green;
+}
+
+  

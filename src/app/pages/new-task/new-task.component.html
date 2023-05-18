@@ -1,0 +1,13 @@
+<body>
+<div class="container">
+    <h2 class="white-text">Add New Task</h2>
+    <form action="">
+      <div class="form-group">
+        <input #taskInput type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+      </div>
+      <br>
+      <button class="btn btn-default red-text" routerLink="../">Cancel</button>
+      <button type="submit" class="btn btn-default green-text" (click)="addTask(taskInput.value)">Submit</button>
+    </form>
+  </div>
+</body>
